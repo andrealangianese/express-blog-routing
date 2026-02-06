@@ -1,3 +1,11 @@
+//richiamo express per usarlo
+
+const express= require("express");
+
+//creo una var in cui salvare le rotte di express
+
+const router = express.Router();
+
 //creo  rotte crud
 
 // index
@@ -29,3 +37,7 @@ app.patch('/posts/:id', function (req, res) {
 app.delete('/posts/:id', (req, res) => {
     res.send('Eliminazione dei posts ' + req.params.id);
 });
+
+//rendo importabili da altri componenti queste rotte 
+
+module.exports = router
