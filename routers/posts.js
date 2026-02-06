@@ -9,32 +9,32 @@ const router = express.Router();
 //creo  rotte crud
 
 // index
-router.get('/posts', function (req, res) {
+router.get('/', function (req, res) {
     res.send('Lista dei post');
 });
 
 // show
-router.get('/posts/:id', function (req, res) {
+router.get('/:id', function (req, res) {
     res.send('Dettagli dei posts ' + req.params.id);
 });
 
 // store
-router.post('/posts', function (req, res) {
+router.post('/', function (req, res) {
     res.send('Creazione nuovi posts');
 });
 
 // update
-router.put('/posts/:id', function (req, res) {
+router.put('/:id', function (req, res) {
     res.send('Modifica integrale dei posts ' + req.params.id);
 });
 
 // modify
-router.patch('/posts/:id', function (req, res) {
+router.patch('/:id', function (req, res) {
     res.send('Modifica parziale dei posts ' + req.params.id);
 });
 
 // destroy
-router.delete('/posts/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     res.send('Eliminazione dei posts ' + req.params.id);
 });
 

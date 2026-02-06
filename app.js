@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 //istanza per rendere utilizzabili le rotte per posts
 
-app.use(routerPosts)
+app.use('/posts' ,routerPosts)
 
 
 
