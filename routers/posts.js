@@ -19,7 +19,16 @@ router.get('/', function (req, res) {
 
 // show
 router.get('/:id', function (req, res) {
-    res.send('Dettagli dei posts ' + req.params.id);
+
+    //var per salvare id
+
+    const idPosts = parseInt(req.params.id)
+
+    //confronto il valore di id
+
+    const post = valoriPosts.find(p => p.id === idPosts)
+    
+    res.json(post);
 });
 
 // store
